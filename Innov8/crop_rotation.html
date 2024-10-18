@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive tool for designing crop rotation models based on soil and climate conditions.">
+    <title>Crop Rotation Tool</title>
+    <link rel="stylesheet" href="styleCR.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#models">Crop Rotation Models</a></li>
+                <li><a href="index.html#soil">Soil & Biodiversity</a></li>
+                <li><a href="index.html#economics">Economic Sustainability</a></li>
+                <li><a href="index.html#climate">Climate-Smart</a></li>
+                <li><a href="index.html#resources">Resources</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <h1>Design Your Crop Rotation Model</h1>
+            <p>Use our interactive tool to create a crop rotation plan tailored to your farm’s conditions.</p>
+        </div>
+    </header>
+
+    <section id="rotation-tool" class="section">
+        <div class="container">
+            <h2>Crop Rotation Tool</h2>
+            <form id="rotation-form">
+                <label for="soil-type">Select Soil Type:</label>
+                <select id="soil-type" name="soil-type" required>
+                    <option value="clay">Clay</option>
+                    <option value="sandy">Sandy</option>
+                    <option value="loamy">Loamy</option>
+                </select>
+
+                <label for="climate-zone">Select Climate Zone:</label>
+                <select id="climate-zone" name="climate-zone" required>
+                    <option value="temperate">Temperate</option>
+                    <option value="tropical">Tropical</option>
+                    <option value="arid">Arid</option>
+                </select>
+
+                <label for="crops">Select Crops:</label>
+                <select id="crops" name="crops" multiple required>
+                    <option value="corn">Corn</option>
+                    <option value="soybean">Soybean</option>
+                    <option value="wheat">Wheat</option>
+                    <option value="barley">Barley</option>
+                    <option value="peas">Peas</option>
+                </select>
+
+                <button type="submit" class="cta-button">Generate Rotation Plan</button>
+            </form>
+
+            <div id="rotation-results" class="results">
+                <h3>Your Suggested Crop Rotation:</h3>
+                <p id="results-message">Fill out the form to see your rotation plan here.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>For additional information or support, please reach out.</p>
+            <form action="#" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="cta-button">Send Message</button>
+            </form>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
